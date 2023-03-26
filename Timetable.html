@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Dropdown list using javascript</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body bgcolor="white">
+    <h1><B>SCHEDULE MANAGEMENT SYSTEM</B></h1>
+    <div class="topnav">
+        <a class="active" href="landing.html">Home</a>
+        <a href="Timetable.html">Timetable</a>
+        <a href="Syllabus.html">Syllabus</a>
+        <a href="Tasks.html">Tasks</a>
+        <div class="align-right">  
+            <a href="Profile.html">Profile<img src="Profile_Image-removebg-preview.png" width="30" height="20"></a>
+          </div>
+    </div>
+    <h1>Please select Section</h1>
+    </body>
+
+	<style>
+		
+
+		.main {
+			height: 400px;  
+			padding: 10px;
+		}
+      bdy {
+			margin: 0px;
+			padding: 0;
+			background: #fffdfd;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 30px;
+		}
+		.dropdown_button {
+         align-items: center;
+			background-color: #04AA6D;
+			color: white;
+			padding: 12px;
+			font-size: 16 px;
+			border: none;
+			cursor: pointer;
+			width: 200px;
+			font-family: montserrat;
+			border: 1px solid #ffffff;
+		}
+
+		.courses {
+         align-items: center;
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 200px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		.courses li {
+         align-items: center;
+			color: black;
+			padding: 6px 6px;
+			text-decoration: none;
+			display: block;
+			list-style: none;
+			background-color: rgb(252, 251, 251);
+			font-family: montserrat;
+			border: 1px solid white;
+		}
+
+		.courses li a {
+			text-decoration: none;
+			color: rgb(0, 0, 0);
+			display: block;
+			padding: 6px;
+		}
+
+		.courses li:hover {
+			background-color: #333;
+			color: white;
+		}
+	</style>
+</head>
+
+<bdy>
+	<div class="main">
+		<div class="dropdown_list">
+			<button class="dropdown_button"
+				onclick="show_list()">
+				Select Section
+			</button>
+
+			<div id="courses_id" class="courses">
+				<li><a href="tablea.html">Section A</a></li>
+				<li><a href="tableb.html">Section B</a></li>
+				<li><a href="tablec.html">Section C</a></li>
+				<li><a href="table.html">ALL</a></li>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function show_list() {
+			var courses = document.getElementById("courses_id");
+
+			if (courses.style.display == "block") {
+				courses.style.display = "none";
+			} else {
+				courses.style.display = "block";
+			}
+		}
+		window.onclick = function (event) {
+			if (!event.target.matches('.dropdown_button')) {
+				document.getElementById('courses_id')
+					.style.display = "none";
+			}
+		}
+	</script>
+</bdy>
+
+</html>
