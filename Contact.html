@@ -8,7 +8,7 @@
     </head>
     <title>SCHEDULE MANAGEMENT SYSTEM</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <link rel="stylesheet" href="cont.css">
   </head>
   <body bgcolor="white"><k>
     <h1><B><img src="Schedule.png" width="40" height="40">SCHEDULE MANAGEMENT SYSTEM</B></h1>
@@ -22,8 +22,50 @@
           </div>
     </div>
     <body>
-        If you face any issues you can feel free to contact us.<br/>
+        <hr>
+        <h1><B><U><FONT align="center"> CONTACT US</FONT></U></B></h1>
+<hr>
+        <font size="5">If you face any issues you can feel free to contact us.<br/>
         Phone : 1800-123-456<br/>
-        Email : abcdef@gmail.com<br/> 
+        Email : bug_slayerz@google.com</font><br/> <br><br>
+        <B><U><FONT align="left" size="5px"> FEDBACK FORM </FONT></U></B>
+        <div class="container" style="width:50%">
+            <form action="action_page.php" style="width:100%" >
+             <font align="left">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="State">State</label>
+              <select id="State" name="State">
+                <option value="Telangana">Telangana</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Goa">Goa</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+              </select>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              
+              <button type="button" onclick="addTask()">Submit</button>
+              <p id="display"></p> 
+        <script>
+            function addTask()
+            {
+                document.getElementById("display").innerHTML =   "THANKS FOR YOUR VALUABLE FEEDBACK!! " ;
+            }
+            </script>
+            </div>
+            </font>
+            </form>
+          </div
         </body>
 </html>
